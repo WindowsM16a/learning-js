@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="cart_qty.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart_qty</title>
+  </head>
+  <body>
+    <button
+      onclick="
+      console.log(`Cart quantity: ${cart_qty}`);
+      "
+    >
+      Show Quantity
+    </button>
+    <button
+      onclick="
+    cart_qty++;
+    console.log(`Cart quantity: ${cart_qty}`);
+    "
+    >
+      Add to Cart
+    </button>
+    <button
+      onclick="
+    cart_qty += 2;
+    console.log(`Cart quantity: ${cart_qty}`);
+    "
+    >
+      +2
+    </button>
+    <button
+      onclick="
+    cart_qty += 3;
+    console.log(`Cart quantity: ${cart_qty}`);
+    "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+      cart_qty = 0;
+      console.log('Cart was cleared');
+      console.log(`Cart quantity: ${cart_qty}`);
+    "
+    >
+      Reset Cart
+    </button>
+
+    <script src="cart_qty.js"></script>
+  </body>
+</html>

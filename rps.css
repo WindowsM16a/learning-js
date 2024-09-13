@@ -1,0 +1,54 @@
+:root{
+    --normalBtSize: 90px;
+    /* --resetBtSize: 30px; */
+}
+
+body{
+    background-color: aqua;
+}
+
+p{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: cursive;
+    color: black;
+}
+
+.normal-btns{
+    cursor: pointer;
+    width: var(--normalBtSize
+    );
+    height: var(--normalBtSize);
+    font-size: 20px;
+    text-align: center;
+    line-height: var(--normalBtSize);
+    padding: 0;
+    border-width: 0.9px;
+    border-radius: 50%;
+}
+
+.reset-btn{
+    cursor: pointer;
+    width: 60px;
+    height: 37px;
+    font-size: 16px;
+    text-align: center;
+    /* line-height: 40px; */
+    padding: 0;
+    border-width: 0.9px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: rgb(70, 113, 233);
+        color: white;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
