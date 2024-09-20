@@ -1,7 +1,7 @@
 // initializing the  variables
 let computerMove;
 let result;
-let scores = JSON.parse(localStorage.getItem('scores'));
+let scores = JSON.parse(localStorage.getItem('scores')) || {wins: 0, losses: 0, ties: 0};
 
 
 // creating the function to calculate the computer move
@@ -12,7 +12,7 @@ function getComputerMove() {
 // creating the logic to reset the score
 function resetScores() {
     scores = { wins: 0, losses: 0, ties: 0 };
-    localStorage.setItem('scores', JSON.stringify(scores));
+    localStorage.removeItem('scores', JSON.stringify(scores));
     alert(`Scores have been reset! Wins: ${scores.wins} Losses: ${scores.losses} and Ties: ${scores.ties} `)
     return resetScores;
 }
