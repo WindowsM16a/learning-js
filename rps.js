@@ -1,11 +1,8 @@
 // initializing the  variables
 let computerMove;
 let result;
-const scores = {
-    wins: 0,
-    losses: 0,
-    ties: 0
-}
+let scores = JSON.parse(localStorage.getItem('scores'));
+
 
 // creating the function to calculate the computer move
 function getComputerMove() {
@@ -14,9 +11,8 @@ function getComputerMove() {
 
 // creating the logic to reset the score
 function resetScores() {
-    scores.wins = 0;
-    scores.losses = 0;
-    scores.ties = 0;
+    scores = { wins: 0, losses: 0, ties: 0 };
+    localStorage.setItem('scores', JSON.stringify(scores));
     alert(`Scores have been reset! Wins: ${scores.wins} Losses: ${scores.losses} and Ties: ${scores.ties} `)
     return resetScores;
 }
@@ -43,6 +39,7 @@ function getResult(userChoice, computerMove) {
 function playRps(userChoice) {
     computerMove = getComputerMove();
     result = getResult(userChoice, computerMove);
+    localStorage.setItem('scores', JSON.stringify(scores));
     alert(`You picked ${userChoice}. Computer picked ${computerMove}. ${result} The scores are Wins: ${scores.wins}, Loses: ${scores.losses} and Ties: ${scores.ties} `)
 }
 
@@ -70,3 +67,5 @@ console.log(JSON.stringify(product2))
 
 // json to js
 console.log(JSON.parse(JSON.stringify(product2)))
+
+
