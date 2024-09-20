@@ -46,3 +46,27 @@ function playRps(userChoice) {
     alert(`You picked ${userChoice}. Computer picked ${computerMove}. ${result} The scores are Wins: ${scores.wins}, Loses: ${scores.losses} and Ties: ${scores.ties} `)
 }
 
+const product2 = {
+    name: 'shirt',
+    'delivery-time': '1 day',
+    rating: {
+        stars: 4.5,
+        count: 87
+    },
+    fun: function function1() {
+        console.log('function inside object');
+    }
+};
+
+console.log(product2);
+console.log(product2.name);
+console.log(product2['name']);
+console.log(product2['delivery-time']);
+
+console.log(product2.rating.count);
+
+// js to json
+console.log(JSON.stringify(product2))
+
+// json to js
+console.log(JSON.parse(JSON.stringify(product2)))
