@@ -1,10 +1,11 @@
 // initializing the  variables
+/*
 let computerMove;
 let result;
 let scores = JSON.parse(localStorage.getItem('scores')) || {wins: 0, losses: 0, ties: 0};
 
 
-// creating the function to calculate the computer move
+// creating the function to calculate the computer mo ve
 function getComputerMove() {
     return Math.random() < 1 / 3 ? 'Rock' : Math.random() < 2 / 3 ? 'Paper' : 'Scissors'; 
 }
@@ -67,5 +68,65 @@ console.log(JSON.stringify(product2))
 
 // json to js
 console.log(JSON.parse(JSON.stringify(product2)))
+
+*/
+
+
+
+
+
+console.log('hello'.length)
+console.log('hello'.toUpperCase()) 
+
+const object1 = {
+    message: 'hello'
+};
+
+const object2 = object1;
+
+object1.message = 'good job';
+console.log(object1);
+console.log(object2);
+
+const object3 = {
+    message: 'good Job'
+};
+
+console.log(object3 === object1);
+
+const object4 = {
+    message: 'good Job',
+    price: 799
+};
+
+// const message = object4.message;
+
+// destructuring shortcut(taking props out of objs)
+const { message, price } = object4;
+console.log(message, price)
+
+
+const object5 = {
+    message,
+    method() {
+        console.log('method')
+    }
+};
+console.log(object5);
+
+object5.method();
+
+console.log(object5)
+
+
+
+
+
+
+
+
+
+
+
 
 
