@@ -1,3 +1,6 @@
+var cart_qty = 0;
+
+
 // var fahrenheit;
 // var celsius;
 
@@ -16,4 +19,4 @@
 // });
 // console.log("Type something and press enter:");
 
-var cart_qty = 0;
+
