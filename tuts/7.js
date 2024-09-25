@@ -58,13 +58,27 @@ function convertLength(length, from, to) {
         let lengthInKm = length / 1.6; 
         return lengthInKm;
     }
+    function convertMiToFt(length) {
+        let lengthInFt = length * 5280;
+        return lengthInFt;
+    }
+    function convertKmToFt(length) {
+        let lengthInFt = length * 3281;
+        return lengthInFt;
+    }
+    
     if (from === 'miles' && to === 'km') {
         return convertToKm(length);
     } else if (from === 'km' && to === 'miles') {
         return convertToMiles(length);
+    } else if (from === 'km' && to === 'ft') { 
+        return convertMiToFt(length);
+    } else if (from === 'miles' && to === 'ft') { 
+        return convertKmToFt(length);
     } else {
-        console.log(`Invalid unit: ${unit}`)
+        console.log(`Invalid unit: ${from}`)
     }
+    
 }
 
 console.log(convertLength(50, 'miles', 'km'))
