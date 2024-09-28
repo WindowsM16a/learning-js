@@ -8,6 +8,16 @@ const product2 = {
     price: 5000,
 }
 
+const product3 = {
+    name: "Pampers",
+    price: 2095,
+}
+
+const product4 = {
+    name: "Pampers",
+    price: 2095,
+}
+
 console.log(product1);
 console.log(product2);
 
@@ -31,6 +41,21 @@ function comparePrice(product1, product2) {
 comparePrice(product1, product2);
 
 
-function isSameProduct(product1,product2) {
-    
+function isSameProduct(product3,product4) {
+    if (product3.name === product4.name && product3.price === product4.price) {
+        return true;
+    } else {
+        return false;
+    }
 }
+
+console.log(isSameProduct(product3, product4));
+
+var text = "GoOd MoRNINg ";
+var resultLower = text.toLowerCase();
+var resultUpper = text.toUpperCase();
+var repeatTxt = resultLower.repeat(2);
+
+console.log(resultLower);
+console.log(resultUpper);
+console.log(repeatTxt);
