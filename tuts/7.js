@@ -69,12 +69,12 @@ function convertLength(length, from, to) {
     
     if (from === 'miles' && to === 'km') {
         return convertToKm(length);
+    } else if (from === 'miles' && to === 'ft') { 
+        return convertKmToFt(length);
     } else if (from === 'km' && to === 'miles') {
         return convertToMiles(length);
     } else if (from === 'km' && to === 'ft') { 
         return convertMiToFt(length);
-    } else if (from === 'miles' && to === 'ft') { 
-        return convertKmToFt(length);
     } else {
         console.log(`Invalid unit: ${from}`)
     }
