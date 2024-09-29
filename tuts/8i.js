@@ -1,19 +1,11 @@
-let scores = JSON.parse(localStorage.getItem(scores)) || {
+let scores = JSON.parse(localStorage.getItem("scores")) || {
     wins: 0,
     losses: 0,
 };
-// // Function to log scores
-// function logScores(message) {
-//     // console.log(message);
-//     // console.log("Wins:", scores.wins);
-//     // console.log("Losses:", scores.losses);
-//     console.log("Full scores object:", JSON.stringify(scores));
-// }
 
-// Simulate a game
 function playGame(guess) {
+    console.log(`current scores: ${scores.wins} wins & ${scores.losses} losses`);
     console.log("Your guess:", guess);
-
 
     const result = Math.random() < 0.5 ? "Heads" : "Tails";
     console.log("computer choice:", result);
@@ -25,13 +17,14 @@ function playGame(guess) {
         scores.losses++;
         console.log("You lose!");
     }
-    localStorage.setItem("scores", JSON.stringify(scores))
-    console.log(scores)
+    saveScores();
+    console.log(scores);
+    console.log('');
 
 }
 
 function saveScores() {
-    console.log(localStorage.setItem("scores", JSON.stringify(scores)));
+    localStorage.setItem("scores", JSON.stringify(scores));
 }
 
 function clearScores() {
@@ -39,7 +32,9 @@ function clearScores() {
         "wins": 0,
         "losses": 0,
     }
-    console.log(`scores have been cleared`)
+    saveScores();
+    console.log(`scores have been cleared`);
+    console.log(scores);
 }
 
 document.getElementById("headsButton").addEventListener("click", () => playGame("Heads"));
