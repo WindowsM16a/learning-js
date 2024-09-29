@@ -3,13 +3,14 @@ const scores = JSON.parse(localStorage.getItem("scores")) || {
     losses: 0
 };
 
+
 function playGame(guess) {
     
     const randNum = Math.random();
     const result = (randNum < 0.5) ? "Heads" : "Tails";
     console.log(`You chose: ${guess} \nComputer chose: ${result}`)
 
-    outcome = (result === guess) ? "You win!" : "You lose!";
+    const outcome = (result === guess) ? "You win!" : "You lose!";
     
     if (guess === result) {
         scores.wins++;
