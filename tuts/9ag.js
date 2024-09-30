@@ -1,7 +1,3 @@
-
-
-
-
 function display9a() {
     console.log(document.querySelector("#nAButton").innerHTML);
 }
