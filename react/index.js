@@ -1,1 +1,8 @@
-ReactDOM.render(<h1>Hi mf</h1>, document.getElementById("root"));
+ReactDOM.render(<ul>
+    <li>
+    Man
+    </li>
+    <li>
+    Woman
+    </li>
+</ul>, document.getElementById("root"));
