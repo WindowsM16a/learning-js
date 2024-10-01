@@ -14,7 +14,7 @@ function displayChoice(choice) {
         document.querySelector("#displayParagraph").innerHTML = "tails";
     }
     console.log(document.querySelector("#displayParagraph").innerHTML);
-}
+}i
 
 
 
